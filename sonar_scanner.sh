@@ -6,7 +6,7 @@ echo Sonar Scanner Installed!
 echo Running Sonar Scanner...
 # We add here the command that runs sonar scanner
 $(pwd)/sonar-scanner-4.6.2.2472-linux/bin/sonar-scanner -X \
-  -Dsonar.projectKey=class-example \
+  -Dsonar.projectKey=victor-morera-lab-example \
   -Dsonar.sources=. \
   -Dsonar.host.url=https://sq.semanticsecurity.org \
   -Dsonar.login=$SONARQUBE_LOGIN
