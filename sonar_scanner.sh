@@ -1,13 +1,13 @@
-echo install Sonar Scanner CLI
+echo Installing Sonar Scanner CLI
 wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.6.2.2472-linux.zip
 unzip sonar-scanner-cli-4.6.2.2472-linux.zip
-export PATH=&(pwd)/sonar-scanner-cli-4.6.2.2472-linux/bin:$PATH
-echo SOnar Scanner installed!
-echo Runnig Sonar Scanner ...
-#we add here the command that runs sonar scanner
-sonar-scanner \
-  -Dsonar.projectKey=victor-morera-lab-example \
+export PATH=$(pwd)/sonar-scanner-cli-4.6.2.2472-linux/bin:$PATH
+echo Sonar Scanner Installed!
+echo Running Sonar Scanner...
+# We add here the command that runs sonar scanner
+$(pwd)/sonar-scanner-4.6.2.2472-linux/bin/sonar-scanner -X \
+  -Dsonar.projectKey=class-example \
   -Dsonar.sources=. \
-  -Dsonar.host.url=https://sonar.semanticsecurity.org \
-  -Dsonar.login=$SONARQUBE_LOGIN  
-echo Done 
+  -Dsonar.host.url=https://sq.semanticsecurity.org \
+  -Dsonar.login=$SONARQUBE_LOGIN
+echo Done!
